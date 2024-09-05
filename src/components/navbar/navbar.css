@@ -4,6 +4,7 @@ nav {
   justify-content: center;
   flex: 1;
   position: relative;
+  height: 100%;
 }
 .nav {
   display: flex;
@@ -14,17 +15,29 @@ nav {
   color: rgba(141, 88, 3, 0.6);
   font-weight: 650;
   font-size: 0.7rem;
+  height: 100%;
 }
 .nav li {
   border-left: 1px solid rgba(141, 88, 3, 0.6);
-  padding: 2px;
+  /* padding: 5px; */
   text-wrap: nowrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 li a {
-  transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out, background-color 600ms ease-in-out;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 li a:hover {
   opacity: 0.5;
+  background-color: white;
 }
 .nav-icon {
   font-size: 1.5rem;
