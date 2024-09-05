@@ -1,0 +1,91 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  color: rgba(141, 88, 3, 0.6);
+  font-weight: 650;
+  font-size: 0.7rem;
+}
+.nav li {
+  border-left: 1px solid rgba(141, 88, 3, 0.6);
+  padding: 2px;
+  text-wrap: nowrap;
+}
+li a {
+  transition: opacity 600ms ease-in-out;
+}
+li a:hover {
+  opacity: 0.5;
+}
+.nav-icon {
+  font-size: 1.5rem;
+}
+.nav-icon.bars {
+  display: none;
+  color: rgba(141, 88, 3, 0.6);
+  cursor: pointer;
+}
+.mobile-nav {
+  display: none; /* This will be overridden by display: flex in the .active class */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 5px;
+  position: fixed;
+  top: 0;
+  left: -10000px; /* Start the element off-screen */
+  background-color: rgba(255, 255, 255, 0.8);
+  min-height: 100vh;
+  min-width: 50vw;
+  z-index: 3;
+  opacity: 0; /* Initial opacity set to 0 */
+  transition: left 2s ease-in-out, opacity 2s ease-in-out; /* Properly formatted transition */
+}
+.mobile-nav li {
+  padding: 5px;
+  width: 100%;
+}
+.mobile-nav li:hover {
+  background-color: white;
+}
+.mobile-nav li a {
+  width: 100%;
+}
+.active.mobile-nav {
+  display: flex; /* Display flex when active */
+  left: 0; /* Bring the element into view */
+  opacity: 1; /* Fade in the element */
+}
+
+@media screen and (max-width: 870px) {
+  .desktop-nav {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .desktop-nav {
+    display: none;
+  }
+  .nav-icon.bars {
+    display: flex;
+  }
+  nav {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 250px) {
+  .logo-div h1 {
+    display: none;
+  }
+}
