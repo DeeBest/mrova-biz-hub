@@ -1,8 +1,42 @@
-# React + Vite
+# MrovaBizHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![screenshot1 of the app](public/Screenshot1.jpg)
 
-Currently, two official plugins are available:
+Check it _**LIVE**_ 👉
+**<https://deebest.github.io/mrovaBizHub/>**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A multi page web application I built with the MERN stack. It's serves as a guid for people in my community who are looking for a certain business in the area. The businesses are stored on Mongodb and I use Express and Node to fetch them and then use React for the frontend of this app.
+
+![screenshot2 of the app](public/Screenshot2.webp)
+
+## Uses
+
+Members of the community can visit the web app and find information about the business they need assistance from.
+
+![screenshot3 of the app](public/Screenshot3.jpg)
+
+## Tech Stack Used
+
+- GIT
+- HTML
+- CSS
+- JavaScript
+- React
+- Node
+- Express
+- Mongodb
+
+## Get In Touch 👇
+
+Email : **<simphiwedladla8@gmail.com>**
+
+Linked: **<https://www.linkedin.com/in/dladla-simphiwe-89061a20a/>**
+
+Github: **<https://github.com/DeeBest>**
+
+Portfolio: **<https://deebest.github.io/personal-webpage/>**
+
+## Credits
+
+images from the FakeStore api, link below.
+**<https://fakestoreapi.com/>**

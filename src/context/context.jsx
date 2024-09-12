@@ -6,16 +6,16 @@ const ContextProvider = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [businesses, setBusinesses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const backendUrl = 'http://localhost:5000';
 
   const fetchBusinesses = async () => {
     setIsLoading(true);
 
     try {
-      const response = await (
-        await fetch('http://localhost:5000/api/businesses')
-      ).json();
+      const response = await fetch(`${backendUrl}/api/businesses`);
+      const data = await response.json();
 
-      setBusinesses(response.businesses);
+      setBusinesses(data.businesses);
       setIsLoading(false);
     } catch (err) {
       console.log(err);
@@ -32,6 +32,7 @@ const ContextProvider = (props) => {
     setIsActive,
     businesses,
     isLoading,
+    backendUrl,
   };
 
   return (
