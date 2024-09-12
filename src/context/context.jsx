@@ -13,7 +13,7 @@ const ContextProvider = (props) => {
 
     try {
       const response = await fetch(`${backendUrl}/api/businesses`);
-      const data = response.json();
+      const data = await response.json();
 
       setBusinesses(data.businesses);
       setIsLoading(false);
