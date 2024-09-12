@@ -6,14 +6,14 @@ const ContextProvider = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [businesses, setBusinesses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = 'https://mrovabizbackend.onrender.com';
 
   const fetchBusinesses = async () => {
     setIsLoading(true);
 
     try {
       const response = await fetch(`${backendUrl}/api/businesses`);
-      const data = await response.json();
+      const data = response.json();
 
       setBusinesses(data.businesses);
       setIsLoading(false);
