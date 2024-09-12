@@ -80,12 +80,12 @@ li a:hover {
   opacity: 1; /* Fade in the element */
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 1200px) {
   .desktop-nav {
     gap: 10px;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1020px) {
   .desktop-nav {
     display: none;
   }

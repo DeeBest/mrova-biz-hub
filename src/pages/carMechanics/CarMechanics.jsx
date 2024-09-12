@@ -1,14 +1,13 @@
-import './foodies.css';
-
+import './carMechanics.css';
 import { useContext } from 'react';
 import { Context } from '../../context/context';
 import BusinessCard from '../../components/businessCard/BusinessCard';
 
-const Foodies = () => {
+const CarMechanics = () => {
   const { businesses, isLoading } = useContext(Context);
 
-  const foodBusinesses = businesses.filter(
-    (business) => business.category === 'food'
+  const mechanicsBusinesses = businesses.filter(
+    (business) => business.category === 'mechanics'
   );
 
   return (
@@ -18,9 +17,9 @@ const Foodies = () => {
           <h1>Loading...</h1>
         ) : (
           <>
-            <h1 className="page-heading">Foodies Spot</h1>
+            <h1 className="page-heading">Car Mechanics</h1>
             <div className="business-cards-div">
-              {foodBusinesses.map((business) => {
+              {mechanicsBusinesses.map((business) => {
                 return <BusinessCard business={business} key={business._id} />;
               })}
             </div>
@@ -30,4 +29,4 @@ const Foodies = () => {
     </main>
   );
 };
-export default Foodies;
+export default CarMechanics;

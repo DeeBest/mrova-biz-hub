@@ -3,7 +3,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  gap: 15px;
 }
 footer .logo-div h1 {
   font-size: 0.7rem;
@@ -45,4 +47,12 @@ footer .icons-container {
   box-shadow: none;
   transform: scale(0.98);
   transform: rotateZ(90deg);
+}
+
+@media (max-width: 660px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

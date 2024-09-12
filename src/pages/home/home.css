@@ -2,9 +2,17 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px;
+  justify-content: center;
+  max-width: 850px;
+  background: linear-gradient(
+    to bottom left,
+    rgba(255, 255, 255, 0.85),
+    rgba(128, 244, 124, 0.7)
+  );
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
 }
 .home section {
-  background-color: rgba(255, 255, 255, 0.75);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,7 +20,7 @@
   font-size: 0.65rem;
   gap: 15px;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+  max-width: 600px;
 }
 .home section h1,
 .home section h2,
@@ -42,4 +50,22 @@
 .sec-three {
   grid-column: 1/2;
   grid-row: 3/4;
+}
+
+@media (max-width: 600px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .intro-sec {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .sec-two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .sec-three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }

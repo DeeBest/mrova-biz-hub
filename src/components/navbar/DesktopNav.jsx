@@ -1,28 +1,32 @@
+import { FaHome } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const DesktopNav = () => {
   return (
     <ul className="desktop-nav nav">
-      <li>
-        <Link>Foodies</Link>
+      <li style={{ marginRight: 'auto', fontSize: '1.5rem' }}>
+        <Link to="/">
+          {' '}
+          <FaHome />{' '}
+        </Link>
       </li>
       <li>
-        <Link>Home</Link>
+        <Link to="/foodies">Foodies Spot</Link>
       </li>
       <li>
-        <Link>Vehicle</Link>
+        <Link to="/hygiene">Hygiene & Beauty</Link>
       </li>
       <li>
-        <Link>Fashion</Link>
+        <Link to="/car-mechanics">Car Mechanics</Link>
       </li>
       <li>
-        <Link>Entertainment</Link>
+        <Link to="/fashion-room">Fashion Room</Link>
       </li>
       <li>
-        <Link>Finances</Link>
+        <Link to="/financial-services">Financial Services</Link>
       </li>
       <li>
-        <Link>Rooms Rental</Link>
+        <Link to="/rooms-rentals">Rooms Rental</Link>
       </li>
     </ul>
   );

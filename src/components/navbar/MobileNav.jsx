@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { useContext } from 'react';
+import { FaHome, FaTimes } from 'react-icons/fa';
 
 import { Context } from '../../context/context';
 
@@ -12,26 +12,29 @@ const MobileNav = () => {
       <li onClick={() => setIsActive(!isActive)}>
         <FaTimes className="nav-icon times" />
       </li>
-      <li>
-        <Link>Foodies</Link>
+      <li style={{ marginRight: 'auto', fontSize: '1.5rem' }}>
+        <Link to="/">
+          {' '}
+          <FaHome />{' '}
+        </Link>
       </li>
       <li>
-        <Link>Home Maintenance</Link>
+        <Link to="/foodies">Foodies Spot</Link>
       </li>
       <li>
-        <Link>Vehicle Maintenance</Link>
+        <Link to="/hygiene">Hygiene & Beauty</Link>
       </li>
       <li>
-        <Link>Fashion Killas</Link>
+        <Link to="/car-mechanics">Car Mechanics</Link>
       </li>
       <li>
-        <Link>Entertainment</Link>
+        <Link to="/fashion-room">Fashion Room</Link>
       </li>
       <li>
-        <Link>Finances</Link>
+        <Link to="/financial-services">Financial Services</Link>
       </li>
       <li>
-        <Link>Room Rental</Link>
+        <Link to="/rooms-rentals">Rooms Rental</Link>
       </li>
     </ul>
   );
