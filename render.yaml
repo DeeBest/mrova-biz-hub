@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: mrovaBizHub
+    env: static
+    staticSite:
+      directory: dist
+      cleanUrl: true
+      routes:
+        - src: /*
+          dest: /index.html
