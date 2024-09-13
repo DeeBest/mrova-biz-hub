@@ -7,8 +7,7 @@ const FinancialServices = () => {
   const { businesses, isLoading } = useContext(Context);
 
   const financialBusinesses = businesses.filter(
-    (business) =>
-      business.category === 'financial' || business.category === 'finance'
+    (business) => business.category === 'finance'
   );
 
   return (
