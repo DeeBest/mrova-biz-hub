@@ -2,16 +2,17 @@ import './home.css';
 import SectionHr from '../../components/sectionHr/SectionHr';
 import { useContext } from 'react';
 import { Context } from '../../context/context';
+import Spinner from '../../components/Spinner';
 
 const Home = () => {
   const { isLoading } = useContext(Context);
 
   return (
     <main>
-      <div className="home">
-        {isLoading ? (
-          <h1>Loading...</h1>
-        ) : (
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className="home">
           <>
             <section className="intro-sec">
               <h1>
@@ -57,8 +58,8 @@ const Home = () => {
               </p>
             </section>
           </>
-        )}
-      </div>
+        </div>
+      )}
     </main>
   );
 };
